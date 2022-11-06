@@ -1,10 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import Hover from './components/Hover';
+import useInput from './hooks/useInput';
 
 function App() {
+    const username = useInput('');
+
     return (
         <div>
-            <input type='text' />
+            <input type='text' {...username} />
+            <Hover />
         </div>
     );
 }
