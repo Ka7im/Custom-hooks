@@ -1,4 +1,5 @@
 import Hover from './components/Hover';
+import List from './components/List';
 import useInput from './hooks/useInput';
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
         <div>
             <input type='text' {...username} />
             <Hover />
+            <List />
         </div>
     );
 }

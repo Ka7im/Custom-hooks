@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react';
 
 export default function useHover(ref) {
-    const { current } = ref;
-
     const [isHovering, setIsHovering] = useState(false);
 
     const on = () => {
@@ -13,9 +11,12 @@ export default function useHover(ref) {
     };
 
     useEffect(() => {
-        if (!current) {
+        if (!ref.current) {
             return;
         }
+
+        const { current } = ref;
+
         current.addEventListener('mouseenter', on);
         current.addEventListener('mouseleave', off);
 

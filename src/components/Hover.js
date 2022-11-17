@@ -4,7 +4,6 @@ import useHover from '../hooks/useHover';
 const Hover = () => {
     const ref = useRef();
     const isHovering = useHover(ref);
-
     return (
         <div
             ref={ref}
